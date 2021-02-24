@@ -1,0 +1,36 @@
+body{
+    background-image: url("../images/Festival-Background.jpeg");
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+header{
+    text-align: center;
+    font-family: sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 1.5em;
+}
+h1{
+    font-size: 3.5em;
+    padding: 0;
+    margin: 0;
+}
+h2{
+    font-size: 1.5em;
+    padding: 0;
+    margin: 0;
+}
+img{
+    text-align: center;
+}
+h3{
+    font-family: sans-serif;
+    border: 1px solid black;
+    padding: 0;
+    margin: 0;
+}
+p{
+    visibility: hidden;
+}
