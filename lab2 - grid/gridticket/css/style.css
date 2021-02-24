@@ -34,3 +34,6 @@ h3{
 p{
     visibility: hidden;
 }
+#info{
+    display: grid;
+}
