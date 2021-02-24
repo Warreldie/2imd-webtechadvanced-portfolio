@@ -5,73 +5,48 @@
     display: flex;
     flex-direction: column;
 }
-#Futur-1{
+.box-1{
     text-align: center;
     background-color: #f82a4f;
     padding: 1em;
-    margin: 1em 0.5em;
-}
-#Futur-2{
-    text-align: center;
-    background-color: #f82a4f;
-    padding: 1em;
-    margin: 1em 0.5em;
+    margin: 0.5em 0.5em;
+    flex-basis: 40%;
 }
 #Futur-3{
     text-align: center;
     background-color: #59f5f1;
     padding: 1em;
-    margin: 1em 0.5em;
-}
-#Futur-4{
-    text-align: center;
-    background-color: #f82a4f;
-    padding: 1em;
-    margin: 1em 0.5em;
-}
-#Futur-5{
-    text-align: center;
-    background-color: #f82a4f;
-    padding: 1em;
-    margin: 1em 0.5em;
+    margin: 0.5em 0.5em;
+    flex-basis: 40%;
 }
 #Futur-6{
     text-align: center;
     background-color: #ffff06;
     padding: 1em;
-    margin: 1em 0.5em;
+    margin: 0.5em 0.5em;
+    flex-basis: 40%;
 }
-#Futur-7{
-    text-align: center;
-    background-color: #f82a4f;
-    padding: 1em;
-    margin: 1em 0.5em;
+@media only screen and (min-width: 650px) {
+    .container-1{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
-#Futur-8{
-    text-align: center;
-    background-color: #f82a4f;
-    padding: 1em;
-    margin: 1em 0.5em;
-}
-#Futur-9{
-    text-align: center;
-    background-color: #f82a4f;
-    padding: 1em;
-    margin: 1em 0.5em;
-}
-#Futur-10{
-    text-align: center;
-    background-color: #f82a4f;
-    padding: 1em;
-    margin: 1em 0.5em;
-}
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 950px) {
     body{
         background-color:pink;
     }
-    .container-1{
-        display: flex;
-        flex-direction: row;
+    .box-1{
+        flex-basis: 15%;
     }
-
+    .container-1{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #Futur-3{
+        flex-basis: 15%;
+    }
+    #Futur-6{
+        flex-basis: 39%;
+    }
 }
