@@ -44,9 +44,10 @@
         flex-wrap: wrap;
     }
     #Futur-3{
+        flex-direction: column;
         flex-basis: 15%;
     }
     #Futur-6{
-        flex-basis: 39%;
+        flex-grow: 0;
     }
 }
