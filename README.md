@@ -7,4 +7,11 @@ Lab 1:
 
 Lab 2:
 
+[Codepen: Grid Ticket](https://codepen.io/Warrel/pen/mdOLpdq?editors=1100)
+
+[Codepen: The Futur](https://codepen.io/Warrel/pen/vYyjpVa)
+
+![Froggy](https://github.com/Warreldie/2imd-webtechadvanced-portfolio/blob/main/lab2%20-%20grid/FlexboxFroggy.png)
+
+![CSSGarden](https://github.com/Warreldie/2imd-webtechadvanced-portfolio/blob/main/lab2%20-%20grid/GridGarden.png)
 
