@@ -40,7 +40,7 @@ class Note {
       taskinput.addEventListener("keyup", (e) => {
         console.log(e.key);
         if(e.key === "Shift"){
-          //Voorlopig met Shift gewerkt
+          //Voorlopig met Shift
           console.log("Hoera!");
           app.createNote(e);
         }

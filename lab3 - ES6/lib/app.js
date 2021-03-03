@@ -54,7 +54,7 @@ var App = /*#__PURE__*/function () {
       console.log(e.key);
 
       if (e.key === "Shift") {
-        //Voorlopig met Shift gewerkt
+        //Voorlopig met Shift
         console.log("Hoera!");
         app.createNote(e);
       }
