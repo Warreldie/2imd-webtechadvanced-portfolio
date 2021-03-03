@@ -1,0 +1,26 @@
+{
+  "name": "2imd-webtechadvanced-portfolio",
+  "version": "1.0.0",
+  "description": "Lab 1:",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.13.9"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d lib -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Warreldie/2imd-webtechadvanced-portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Warreldie/2imd-webtechadvanced-portfolio/issues"
+  },
+  "homepage": "https://github.com/Warreldie/2imd-webtechadvanced-portfolio#readme"
+}
