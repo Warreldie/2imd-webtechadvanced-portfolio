@@ -1,13 +1,13 @@
 class Note {
     constructor(title) {
       this.title = title;
-      // HINT🤩 this.element = this.createElement(title);
+      this.element = this.createElement(title);
     }
   
     createElement(title) {
       let newNote = document.createElement("li");
   
-      // HINT🤩 newNote.addEventListener('click', this.remove.bind(newNote));
+      newNote.addEventListener('click', this.remove.bind(newNote));
   
       return newNote;
     }
@@ -34,6 +34,14 @@ class Note {
   class App {
     constructor() {
       console.log("👊🏼 The Constructor!");
+      let taskinput = document.getElementById("taskInput");
+      taskinput.addEventListener("keyup", function(event){
+        if(event.key === 13){
+          event.preventDefault();
+          console.log("Hoera!");
+          createNote();
+        }
+      });
   
       // HINT🤩
       // pressing the enter key in the text field triggers the createNote function
