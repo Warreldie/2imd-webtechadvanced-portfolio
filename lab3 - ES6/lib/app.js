@@ -10,15 +10,14 @@ var Note = /*#__PURE__*/function () {
   function Note(title) {
     _classCallCheck(this, Note);
 
-    this.title = title;
-    this.element = this.createElement(title);
+    this.title = title; // HINT🤩 this.element = this.createElement(title);
   }
 
   _createClass(Note, [{
     key: "createElement",
     value: function createElement(title) {
-      var newNote = document.createElement("li");
-      newNote.addEventListener('click', this.remove.bind(newNote));
+      var newNote = document.createElement("li"); // HINT🤩 newNote.addEventListener('click', this.remove.bind(newNote));
+
       return newNote;
     }
   }, {
@@ -48,16 +47,18 @@ var App = /*#__PURE__*/function () {
   function App() {
     _classCallCheck(this, App);
 
-    console.log("👊🏼 The Constructor!");
+    console.log("👊🏼 The Constructor!"); // pressing the enter key in the text field triggers the createNote function
+
     var taskinput = document.getElementById("taskInput");
-    taskinput.addEventListener("keyup", function (event) {
-      if (event.key === 13) {
-        event.preventDefault();
+    taskinput.addEventListener("keyup", function (e) {
+      console.log(e.key);
+
+      if (e.key === "Shift") {
+        //Voorlopig met Shift gewerkt
         console.log("Hoera!");
-        createNote();
+        app.createNote(e);
       }
     }); // HINT🤩
-    // pressing the enter key in the text field triggers the createNote function
     // this.txtTodo = ???
     // this.txtTodo.addEventListener("keypress", this.createNote.bind(this));
     // read up on .bind() -> we need to pass the current meaning of this to the eventListener
@@ -72,7 +73,8 @@ var App = /*#__PURE__*/function () {
     }
   }, {
     key: "createNote",
-    value: function createNote(e) {// this function should create a new note by using the Note() class
+    value: function createNote(e) {
+      console.log("👊🏼 The CreateNote!"); // this function should create a new note by using the Note() class
       // HINT🤩
       // note.add();
       // note.saveToStorage();

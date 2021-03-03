@@ -1,13 +1,13 @@
 class Note {
     constructor(title) {
       this.title = title;
-      this.element = this.createElement(title);
+      // HINT🤩 this.element = this.createElement(title);
     }
   
     createElement(title) {
       let newNote = document.createElement("li");
   
-      newNote.addEventListener('click', this.remove.bind(newNote));
+      // HINT🤩 newNote.addEventListener('click', this.remove.bind(newNote));
   
       return newNote;
     }
@@ -34,17 +34,19 @@ class Note {
   class App {
     constructor() {
       console.log("👊🏼 The Constructor!");
+      
+      // pressing the enter key in the text field triggers the createNote function
       let taskinput = document.getElementById("taskInput");
-      taskinput.addEventListener("keyup", function(event){
-        if(event.key === 13){
-          event.preventDefault();
+      taskinput.addEventListener("keyup", (e) => {
+        console.log(e.key);
+        if(e.key === "Shift"){
+          //Voorlopig met Shift gewerkt
           console.log("Hoera!");
-          createNote();
+          app.createNote(e);
         }
       });
   
       // HINT🤩
-      // pressing the enter key in the text field triggers the createNote function
       // this.txtTodo = ???
       // this.txtTodo.addEventListener("keypress", this.createNote.bind(this));
       // read up on .bind() -> we need to pass the current meaning of this to the eventListener
@@ -58,6 +60,7 @@ class Note {
     }
   
     createNote(e) {
+      console.log("👊🏼 The CreateNote!");
       // this function should create a new note by using the Note() class
       // HINT🤩
       // note.add();
