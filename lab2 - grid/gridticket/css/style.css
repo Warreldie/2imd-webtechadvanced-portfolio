@@ -58,13 +58,11 @@ h4{
 }
 @media only screen and (min-width: 750px){
     body{
-        border: 1px solid black;
+        border: 2px solid black;
         margin: 1em;
-        margin-right: 0.5em;
         display: grid;
-        grid-template-columns: repeat(2, 70% 30%);
-        grid-template-rows: repeat(3, 80% 10% 10%);
-        padding-bottom: 2em;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 4fr 0.5fr 0.5fr;
         background-position: center;
         background-size: cover;
         background-size: 100% 100%;
@@ -74,7 +72,7 @@ h4{
         color: black;
         display: grid;
         border-bottom: 1px solid black;
-        border-right: 1px solid black;
+        border-right: 2px solid black;
         grid-template-rows: repeat(2, 1fr);
         margin-bottom: 0;
         padding: 0em;
@@ -103,6 +101,13 @@ h4{
         grid-row: 2;
         grid-template-columns: repeat(1, 1fr 1fr 1fr);
         grid-template-rows: repeat(1, 1fr);
+        border-style:hidden;
+    }
+    h3{
+        border-style: hidden;
+        border-right: 2px solid black;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
     }
     #Ticket{ 
         grid-column: 3/3;
@@ -111,13 +116,13 @@ h4{
     }
     h4{
         margin: 0;
-        margin-top: 0.7em;
         text-align: center;
         display: inline;
         grid-column: 1/2;
         grid-row: 3;
         padding: 1em;
         padding-bottom: 2em;
-        border: 1px solid black;
+        border-right: 2px solid black;
+        border-top: 1px solid black;
     }
 }

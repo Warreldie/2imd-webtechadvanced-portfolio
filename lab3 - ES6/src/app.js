@@ -15,6 +15,12 @@ class Note {
     add() {
       // HINT🤩
       // this function should append the note to the screen somehow
+      console.log("Went into add");
+      var ul = document.getElementById("taskList");
+      var li = document.createElement("li");
+      li.appendChild(document.createTextNode(text));
+      ul.appendChild(li);
+    
     }
   
     saveToStorage() {
@@ -33,10 +39,16 @@ class Note {
   
   class App {
     constructor() {
-      console.log("👊🏼 The Constructor!");
+      // pressing the enter key in the text field triggers the createNote function
+      let taskinput = document.getElementById("taskInput");
+      taskinput.addEventListener("keyup", (e) => {
+        if(e.key === "Shift"){
+          //Voorlopig met Shift
+          app.createNote();
+        }
+      });
   
       // HINT🤩
-      // pressing the enter key in the text field triggers the createNote function
       // this.txtTodo = ???
       // this.txtTodo.addEventListener("keypress", this.createNote.bind(this));
       // read up on .bind() -> we need to pass the current meaning of this to the eventListener
@@ -50,9 +62,14 @@ class Note {
     }
   
     createNote(e) {
+      //Text te pakken hebben
+      let note = document.getElementById("taskInput").value;
+      console.log(note); 
+
+
       // this function should create a new note by using the Note() class
       // HINT🤩
-      // note.add();
+      note.add();
       // note.saveToStorage();
       // clear the text field with .reset in this class
       // if (e.key === "Enter")
