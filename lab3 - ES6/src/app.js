@@ -6,7 +6,7 @@ class Note {
   createElement(title) {
     let newNote = document.createElement("li");
     newNote.innerHTML = title;
-    newNote.addEventListener('click', this.remove.bind(newNote));
+    newNote.addEventListener("click", this.remove.bind(newNote));
 
     return newNote;
   }
@@ -15,9 +15,8 @@ class Note {
     document.getElementById("taskList").appendChild(this.element);
   }
   saveToStorage() {
-    let notes = [];
-    // if you want to store arrays, look at JSON.parse and JSON.stringify
-    notes = JSON.parse(localStorage.getItem("notes"));
+    let notes = localStorage.getItem("notes");
+    notes = JSON.parse(notes) || [];
     notes.push(this.title);
     // localStorage only supports strings, not arrays
     localStorage.setItem("notes", JSON.stringify(notes));
@@ -25,7 +24,7 @@ class Note {
   remove() {
     // remove the item from screen and from localstorage
     document.getElementById("taskList").removeChild(this);
-    
+
     let notes = localStorage.getItem("notes");
     notes = JSON.parse(notes);
     let text = this.innerHTML;
@@ -50,11 +49,12 @@ class App {
     let notes = localStorage.getItem("notes");
 
     notes = JSON.parse(notes);
-
-    notes.forEach((title) => {
-      let newNote = new Note(title);
-      newNote.add();
-    });
+    if (notes !== null) {
+      notes.forEach((title) => {
+        let newNote = new Note(title);
+        newNote.add();
+      });
+    }
   }
   createNote(e) {
     // Number 13 is the "Enter" key on the keyboard
