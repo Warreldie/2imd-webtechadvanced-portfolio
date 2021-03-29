@@ -14,7 +14,6 @@ const getAll = (req, res) => {
 };
 const create = (req, res, next) => {
     console.log(req.body);
-
     let message = new Message;
     message.text = req.body.text;
     message.user = req.body.user;
@@ -36,6 +35,19 @@ const create = (req, res, next) => {
         }
     })
 };
-
+/*const getUser = (req, res) => {
+    Message.find({"user": "Ward"}, (err, doc) => {
+        if(!err){
+            res.json({
+                "status":"Succes Get",
+                "data":{ 
+                    "message": doc
+                }
+            });
+        }
+    });
+};
+*/
 module.exports.getAll = getAll;
 module.exports.create = create;
+//module.exports.getUser = getUser;
