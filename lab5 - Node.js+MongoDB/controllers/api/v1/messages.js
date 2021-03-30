@@ -12,6 +12,26 @@ const getAll = (req, res) => {
         }
     });
 };
+const getId = (req, res) => {
+    Message.find({"_id": ":id"}, (err, doc) => {
+        if(err){
+            res.json({
+                "status":"Error Get",
+                "data":{ 
+                    "message": err
+                }
+            });
+        }
+        if(!err){
+            res.json({
+                "status":"Succes Get",
+                "data":{ 
+                    "message": "Getting message with ID"
+                }
+            });
+        }
+    });
+};
 const create = (req, res, next) => {
     console.log(req.body);
     let message = new Message;
@@ -49,5 +69,6 @@ const create = (req, res, next) => {
 };
 */
 module.exports.getAll = getAll;
+module.exports.getId = getId;
 module.exports.create = create;
 //module.exports.getUser = getUser;
