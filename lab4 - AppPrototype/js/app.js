@@ -40,7 +40,6 @@ class App {
         this.getCity();
       })
       .then((err) => {
-        //console.log(err);
       });
   }
   getCity(){
@@ -54,7 +53,6 @@ class App {
         this.getTrain();
       })
       .then((err) => {
-        //console.log(err);
       });
   }
   getTrain() {
@@ -64,14 +62,21 @@ class App {
         return response.json();
       })
       .then((data) => {
-        document.querySelector("#departure").innerHTML = "Van: " + this.departurecity;
-        document.querySelector("#arrival").innerHTML = "Naar: " + this.arrivalcity;
-        document.querySelector("#depplatform").innerHTML = "Spoor " + data.connection[0]["departure"]["platform"];
-        document.querySelector("#arrplatform").innerHTML = "Spoor " + data.connection[0]["arrival"]["platform"];
         console.log(data);
+        document.querySelector("#departure").innerHTML =
+          "Van: " + this.departurecity;
+        document.querySelector("#arrival").innerHTML =
+          "Naar: " + this.arrivalcity;
+        if (data == "error") {
+          document.querySelector("#title").innerHTML = "Helaas is er geen data over deze verbinding, om naar het onderstaande concert te gaan kijk je best op nmbs.be wat het dichtsbijzijnde station is.";
+        } else {
+          document.querySelector("#depplatform").innerHTML =
+            "Spoor " + data.connection[0]["departure"]["platform"];
+          document.querySelector("#arrplatform").innerHTML =
+            "Spoor " + data.connection[0]["arrival"]["platform"];
+        }
       })
       .then((err) => {
-        //console.log(err);
       });
   }
   errorLocation(err) {
