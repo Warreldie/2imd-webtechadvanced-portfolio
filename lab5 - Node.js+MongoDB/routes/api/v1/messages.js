@@ -12,6 +12,4 @@ router.put("/:id", messagesController.update);
 
 router.delete("/:id", messagesController.remove);
 
-router.get("/:username", messagesController.getUser);
-
 module.exports = router;
