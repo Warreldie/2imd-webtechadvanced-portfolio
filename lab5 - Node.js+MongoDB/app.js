@@ -12,7 +12,7 @@ const usersRouter = require('./routes/users');
 const apiChatRouter = require('./routes/api/v1/messages');
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/messages', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb+srv://m001-student:lab5@lab5.ddg6t.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
